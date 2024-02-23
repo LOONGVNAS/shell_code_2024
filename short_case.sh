@@ -1,5 +1,10 @@
 #!/bin/bash
 # Using a short case statement 
+##case variable in
+##pattern1 | pattern2) commands1;; 
+##pattern3) commands2;;
+##*) default commands;; 
+##esac
 #
 case $USER in
 rich | christine)
