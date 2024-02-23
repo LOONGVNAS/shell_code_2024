@@ -13,8 +13,6 @@ else
 fi
 
 
-
-
 if (cd . ; touch ext.txt; rm -f ext.txt; echo "google"; (echo $BASH_SUBSHELL))
 then
      (echo $BASH_SUBSHELL)
