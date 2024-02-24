@@ -15,3 +15,17 @@
 #####  换行符
 #####如果 bash shell 在数据中看到了这些字符中的任意一个，那么它就会认为这是列表中的一个 
 #####新字段的开始。
+
+# changing the IFS value 
+IFS.OLD=$IFS
+IFS=$'\n'
+for entry in $(cat /etc/passwd) 
+do
+   echo "Values in $entry –" 
+   IFS=:
+   for value in $entry 
+   do
+      echo "   $value" 
+   done
+done
+
