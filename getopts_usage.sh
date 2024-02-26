@@ -58,6 +58,7 @@ do
         esac
 done
 #在处理每个想选时，getopts会将OPTIND加1, 处理完选项后，可以使用shift和OPTIND来移动参数
+#OPTIND参数的初始值为1 这里输出OPTIND=3, shift 2 将前两个命令行参数移除
 echo  $OPTIND
 shift $[ $OPTIND - 1 ]
 #
