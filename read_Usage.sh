@@ -13,3 +13,21 @@ else
      echo "Sorry, no longer waiting for name." 
 fi
 exit
+
+#本例中使用了-n 选项和数值 1，告 诉 read 命令在接收到单个字符后退出。只要按下单个字 
+#符进行应答，read 命令就会接受输入并将其传给变量，无须按 Enter 键
+
+#!/bin/bash
+# Using the read command for one character 
+#
+read -n 1 -p "Do you want to continue [Y/N]? " answer 
+#
+case $answer in 
+Y | y) echo
+       echo "Okay. Continue on...";; 
+N | n) echo
+       echo "Okay. Goodbye" 
+       exit;;
+esac
+echo "This is the end of the script." 
+exit
