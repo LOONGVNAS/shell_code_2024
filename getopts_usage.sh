@@ -70,4 +70,27 @@ do
 done
 exit
 
+#下面代码是注释掉 shift $[ $OPTIND - 1 ] 语句的效果
+[loongson@localhost ~]$ ./extractwithgetopts.sh -db Bvalue test1 test2
+
+Found the -d option
+Found the -b option with parameter value Bvalue
+3
+
+Parameter 1: -db
+Parameter 2: Bvalue
+Parameter 3: test1
+Parameter 4: test2
+
+#下面代码是打开 shift $[ $OPTIND - 1 ] 语句的效果
+[loongson@localhost ~]$ ./extractwithgetopts.sh -db Bvalue test1 test2
+
+Found the -d option
+Found the -b option with parameter value Bvalue
+3
+
+Parameter 1: test1
+Parameter 2: test2
+
+
 
