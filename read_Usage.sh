@@ -4,6 +4,7 @@
 #!/bin/bash
 # Using the read command with a timer 
 #
+# 计时器超时 if语句不成立，执行else部分
 if read -t 5 -p "Enter your name: " name 
 then
      echo "Hello $name, welcome to my script." 
