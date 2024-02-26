@@ -27,17 +27,17 @@ done
 echo
 exit
 
+#用双连字符将命令行中的选项和参数分开：
+#[loongson@localhost ~]$ ./test.sh -a -b -c -d -- test1 test2 test3 test4
 
-[loongson@localhost ~]$ ./test.sh -a -b -c -d -- test1 test2 test3 test4
+#Found the -a option
+#Found the -b option
+#Found the -c option
+#-d is not an option
 
-Found the -a option
-Found the -b option
-Found the -c option
--d is not an option
-
-Using the shift method:
-Parameter #1: test1
-Parameter #2: test2
-Parameter #3: test3
-Parameter #4: test4
+#Using the shift method:
+#Parameter #1: test1
+#Parameter #2: test2
+#Parameter #3: test3
+#Parameter #4: test4
 
