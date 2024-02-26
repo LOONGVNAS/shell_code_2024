@@ -40,3 +40,34 @@ Found the -b option with parameter value Bvalue
 Found the -a option
 ./extractwithgetopts.sh: 非法选项 -- d
 Unknown option: ?
+
+
+#!/bin/bash
+#Extract command-line options and values with getopts
+#
+
+echo
+while getopts :ab:cd opt
+do
+        case "$opt" in
+                a) echo "Found the -a option"  ;;
+                b) echo "Found the -b option with parameter value $OPTARG" ;;
+                c) echo "Found the -c option"  ;;
+                d) echo "Found the -d option"  ;;
+                *) echo "Unknown option: $opt" ;;
+        esac
+done
+#在处理每个想选时，getopts会将OPTIND加1, 处理完选项后，可以使用shift和OPTIND来移动参数
+echo  $OPTIND
+shift $[ $OPTIND - 1 ]
+#
+echo
+count=1
+for param in "$@"
+do
+     echo "Parameter $count: $param"
+     count=$[ $count + 1 ]
+done
+exit
+
+
