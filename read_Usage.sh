@@ -31,3 +31,34 @@ N | n) echo
 esac
 echo "This is the end of the script." 
 exit
+
+
+#-s 选项可以避免在 read 命令中输入的数据出现在屏幕上（其实数据还是会被显示，只不过 read 命令将文本颜色设成了跟背景色一样）。
+#read -s -p "Enter your password: " pass
+#echo
+
+
+#一次读取一行，无内容可读取时返回非0状态码
+#!/bin/bash
+# Using the read command to read a file 
+#
+count=1
+cat $HOME/scripts/test.txt | while read line 
+do
+echo "Line $count: $line" 
+     count=$[ $count + 1 ] 
+done
+echo "Finished processing the file." 
+exit
+$
+$ cat $HOME/scripts/test.txt
+The quick brown dog jumps over the lazy fox. 
+This is a test. This is only a test.
+O Romeo, Romeo! Wherefore art thou Romeo? 
+$
+$ ./readfile.sh
+Line 1: The quick brown dog jumps over the lazy fox.
+Line 2: This is a test. This is only a test.
+Line 3: O Romeo, Romeo! Wherefore art thou Romeo? 
+Finished processing the file.
+$
