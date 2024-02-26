@@ -33,3 +33,18 @@ $ ./bigshiftparams.sh alpha bravo charlie delta
 The original parameters: alpha bravo charlie delta
 Now shifting 2...
 Here's the new first parameter: charlie
+
+#Extract command-line options
+while [ -n "$1" ]
+do
+  case "$1" in
+          -a) echo "Found the -a option" ;; 
+          -b) echo "Found the -b option" ;; 
+          -c) echo "Found the -c option" ;; 
+          *) echo "$1 is not an option" ;; 
+   esac
+   shift
+  done
+  echo&&exit
+
+
