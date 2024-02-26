@@ -8,11 +8,11 @@ do
           -a) echo "Found the -a option" ;;
           -b) echo "Found the -b option" ;;
           -c) echo "Found the -c option" ;;
-          --) shift
+          --) shift  
               break;;
           *) echo "$1 is not an option" ;;
      esac
-     shift
+     shift #在遇到双连字符时，脚本会用 break 命令跳出 while 循环。由于提前结束了循环，因此需要再加入另一个 shift 命令来将双连字符移出位置变量。
 done
 
 #
