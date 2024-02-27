@@ -9,6 +9,7 @@
 # Check for command-line options here using getopts.
 # If none, then go on to File Input Method
 #
+# 当CLI选项不存在时，条件不成立，直接执行获得file mode处理逻辑
 while getopts t: opt
 do
      case "$opt" in
