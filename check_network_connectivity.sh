@@ -117,7 +117,7 @@ fi
 exit
 
 
-#CLI 的用法
+#CLI 的用法 百度IPv4地址
 [loongson@localhost ~]$ ./test.sh -t IPv4 110.242.68.4
 Test OPTIND IS : 3
 
@@ -129,8 +129,8 @@ PING 110.242.68.4 (110.242.68.4) 56(84) bytes of data.
 3 packets transmitted, 3 received, 0% packet loss, time 2003ms
 rtt min/avg/max/mdev = 10.600/16.077/24.836/6.258 ms
 
-
-#FILE 的用法
+ 
+#FILE 的用法： 回环地址和百度IPv6地址
 [loongson@localhost ~]$ cat 1.txt
 127.0.0.1
 IPv4
