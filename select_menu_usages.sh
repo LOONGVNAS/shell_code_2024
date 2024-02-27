@@ -1,5 +1,3 @@
-select_menu_usages.sh
-[loongson@localhost ~]$ cat test.sh
 #!/bin/bash
 # simple script menu
 function diskspace {
