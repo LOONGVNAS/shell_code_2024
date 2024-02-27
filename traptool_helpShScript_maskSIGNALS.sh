@@ -76,4 +76,4 @@ trap - $signalList  #Set to default behavior
 #
 exit
 
- ./trapandrun.sh -S "1 2 20" testTandR.sh
+#Usage: ./trapandrun.sh -S "1 2 20" testTandR.sh
